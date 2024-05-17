@@ -1,3 +1,4 @@
+
 html, body {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@ html, body {
 }
 
 .Menu {
-  background-color: rgb(255, 255, 255);
+  background-color: #5A6276;
   flex: 0 1 300px;
   flex-direction: column;
 }
@@ -30,13 +31,13 @@ html, body {
   display: flex;
   align-items: center;
   height: 60px;
-  margin-top: 3%;
   padding-left: 8%;
-  background-color: aqua;
+  background-color: white;
 }
 
 .LogoImg{
-  width: 170px;
+  width: 165px;
+  margin-top: 2%;
 }
 
 .iconCheDown{
@@ -60,7 +61,7 @@ html, body {
 
 .PersonelEvaluation:hover .iconCheckList,
 .PersonelEvaluation:hover .h3PersonelEvaluation,
-.PersonelEvaluation:hover .iconCheDownPer {
+.PersonelEvaluation:hover .iconChePer {
   color: #5CB800;
 }
 
@@ -76,25 +77,78 @@ html, body {
 }
 
 .h3PersonelEvaluation{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 17px;
+  text-shadow: -2px 2px #4e4e4e;
   color: white;
   
 }
 .ChildPersonelEvaluation .iconCheckList, 
-.ChildPersonelEvaluation .iconCheDownPer {
+.ChildPersonelEvaluation .iconChePer {
   color: white;
   width: 18%;
-  
 }
+
 
 
 .PersonelEvaluation.green .iconCheckList,
 .PersonelEvaluation.green .h3PersonelEvaluation,
-.PersonelEvaluation.green .iconCheDownPer {
+.PersonelEvaluation.green .iconChePer {
   color: #5CB800;
+}
+
+.PersonelEvaluation.green{
+  background-color: #5CB800;
 }
 
 .ChildMenu{
   display: block;
+}
+
+.QuestionBank{
+  display: block;
+  height: 60px;
+  background-color: rgb(209, 207, 207);
+}
+
+.childQuestionBank{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 98%;
+  margin-left: 2%;
+  text-align: center;
+  background-color: #3c4049;
+  padding-left: 6%;
+}
+
+.childQuestionBank .iconQuestion{
+  color: white;
+
+}
+
+.childQuestionBank .h3QuestionBank {
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  text-shadow: -2px 2px #4e4e4e;
+  font-size: 16px;
+  margin-left: 16%;
+}
+
+.childQuestionBank:hover .iconQuestion,
+.childQuestionBank:hover .h3QuestionBank{
+  color: #5CB800;
+}
+
+.QuestionBank:hover{
+  background-color: #5CB800;
+}
+
+.QuestionBank.green .iconQuestion,
+.QuestionBank.green .h3QuestionBank{
+  color: #5CB800;
+}
+
+.QuestionBank.green{
+  background-color: #5CB800;
 }
