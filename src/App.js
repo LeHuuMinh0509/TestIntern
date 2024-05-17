@@ -1,11 +1,12 @@
 import './App.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown,faChevronUp, faListCheck, faQuestion } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faBell } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react';
 
 function App() {
   const [isOpen, setIsOpen] = useState(true);
   const [isOpenQB, setIsOpenQB] = useState(false);
+  const [isOpenTP, setIsOpenTP] = useState(false);
 
   
   //Open child of PersonnelEvoluation
@@ -16,6 +17,11 @@ function App() {
   //Open child of QuestionBank
   const toggleOpenQuestionBank = () => {
     setIsOpenQB(!isOpenQB);
+  };
+
+  //Open tab Personnel
+  const toggleOpenTabPersonnel = () => {
+    setIsOpenTP(!isOpenTP);
   };
 
 
@@ -51,15 +57,64 @@ function App() {
             </>
            )}
             </div>
-            
-
           </div>
         </div>
 
       </div>
 
-      <div className='PagePersonnel'>
 
+      <div className='PagePersonnel'>
+          <div className='Header'>
+            <div class="tabs">
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab" onClick={toggleOpenTabPersonnel}><span className={`tab-content ${isOpenTP ? 'green' : ''}`}>NHÂN SỰ</span></div>
+              
+            </div>
+
+            <div className='ElseOfHeader'>
+              <FontAwesomeIcon className="iconSearch" icon={faMagnifyingGlass}/>
+              <FontAwesomeIcon className="iconBell" icon={faBell}/>
+              <div class="circleAvt">
+                <img className="avt" src="../assets/avt2.jpg" alt="" />
+              </div>
+            </div>
+
+          </div>
+
+          <div className='Filter'>
+            <div className='FilterGroup'>
+              <div className='Groups'>
+                <div className='Writing'>
+                  <span className='SpanWriting'>Đang soạn thảo</span>
+                  <input type="checkbox" className="CheckWriting" value="Writing"></input>
+                </div>
+              </div>
+
+
+              <div className='ElseOfFilter'>
+
+              </div>
+            </div>
+
+            <div className='FilterSearch'>
+              
+            </div>
+          </div>
+
+          <div className='ShowList'>
+
+          </div>
+
+          
+          <div className='ShowPage'>
+
+          </div>
       </div>
     </div>
   );

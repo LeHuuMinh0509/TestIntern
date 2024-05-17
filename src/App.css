@@ -57,6 +57,7 @@ html, body {
 
 .PersonelEvaluation:hover{
   background-color: #5CB800;
+  cursor: pointer;
 }
 
 .PersonelEvaluation:hover .iconCheckList,
@@ -118,7 +119,7 @@ html, body {
   width: 98%;
   margin-left: 2%;
   text-align: center;
-  background-color: #3c4049;
+  background-color: #474F63;
   padding-left: 6%;
 }
 
@@ -151,4 +152,154 @@ html, body {
 
 .QuestionBank.green{
   background-color: #5CB800;
+}
+
+
+.PagePersonnel{
+  background-color: #EDEFF3;
+}
+
+.Header{
+  background-color: white;
+  display: flex;
+  height: 60px;
+  width: 99.5%;
+  margin-left: 0.25%;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: #BBBBBB;
+  font-weight: bold;
+  width: 60%;
+
+}
+.tab {
+  padding-left: 2%;
+  padding-right: 2%;
+  white-space: nowrap;
+  position: relative;
+  
+}
+.tab:not(:last-child)::after {
+  content: '|';
+  padding-left: 27%;
+}
+
+.tab-content {
+  display: inline-block;
+  position: relative;
+}
+
+.tab-content:hover{
+  cursor: pointer;
+  color: #248546;
+
+}
+
+.tab:hover .tab-content::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #248546;
+}
+
+
+
+.tab-content.green::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #248546;
+  
+}
+
+.tab-content.green{
+  color: #248546;
+}
+
+.ElseOfHeader{
+  /* background-color: #248546; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8%;
+  margin-left: 30%;
+}
+
+.iconSearch{
+  height: 20px;
+  color: #BBBBBB;
+}
+
+.iconBell{
+  height: 20px;
+  color: #BBBBBB;
+}
+
+.iconSearch:hover,
+.iconBell:hover{
+  color: #248546;
+  cursor: pointer;
+}
+
+.circleAvt{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #5CB800;
+  overflow: hidden;
+}
+
+.avt{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.FilterGroup{
+  display: flex;
+  align-items: center;
+  /* background-color: #248546; */
+  height: 60px;
+}
+
+.Groups{
+  display: flex;
+  padding-left: 1%;
+}
+
+.Writing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 170px;
+  border-radius: 20px;
+  border: 3px solid rgb(253, 253, 253);
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: white;
+
+}
+
+.CheckWriting {
+  width: 20px;
+  border: 2px solid green;
+  background-color: #BBBBBB;
+  cursor: pointer;
+  position: relative;
+  margin-left: 25px;
 }
