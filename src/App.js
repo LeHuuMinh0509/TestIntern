@@ -7,6 +7,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(true);
   const [isOpenQB, setIsOpenQB] = useState(false);
   const [isOpenTP, setIsOpenTP] = useState(false);
+  const [isClickWT, setIsClickWT] = useState(false);
 
   
   //Open child of PersonnelEvoluation
@@ -24,7 +25,9 @@ function App() {
     setIsOpenTP(!isOpenTP);
   };
 
-
+  const toggleClickWriting = () =>{
+    setIsClickWT(!isClickWT);
+  }
 
 
   return (
@@ -90,9 +93,9 @@ function App() {
           <div className='Filter'>
             <div className='FilterGroup'>
               <div className='Groups'>
-                <div className='Writing'>
+                <div className={`Writing ${isClickWT ? 'green' : ''}`} onClick={toggleClickWriting}>
                   <span className='SpanWriting'>Đang soạn thảo</span>
-                  <input type="checkbox" className="CheckWriting" value="Writing"></input>
+                  <input type="checkbox" className="CheckWriting" value="Writing" checked={isClickWT}></input>
                 </div>
               </div>
 

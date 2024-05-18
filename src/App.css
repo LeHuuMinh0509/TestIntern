@@ -292,14 +292,51 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   background-color: white;
+}
 
+.Writing:hover{
+  border: 3px solid #008000;
 }
 
 .CheckWriting {
-  width: 20px;
-  border: 2px solid green;
-  background-color: #BBBBBB;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
   position: relative;
   margin-left: 25px;
+  appearance: none;
+  border-radius: 3px;
+  border:2px solid #BBBBBB ;
 }
+
+
+.Writing:hover .CheckWriting {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
+
+.CheckWriting:checked {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
+
+
+.CheckWriting:checked::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 3.5px;
+  width: 2.2px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.Writing.green{
+  border: 3px solid #008000;
+}
+
+
+
+
