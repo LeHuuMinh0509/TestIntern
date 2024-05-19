@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Mulish');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -170,7 +172,7 @@ html, body {
 
 .tabs {
   display: flex;
-  font-family: Arial, sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #BBBBBB;
   font-weight: bold;
   width: 60%;
@@ -278,6 +280,9 @@ html, body {
 .Groups{
   display: flex;
   padding-left: 1%;
+  width: 37%;
+  justify-content: space-between;
+
 }
 
 .Writing{
@@ -285,13 +290,18 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 30px;
-  width: 170px;
+  width: auto;
+  padding-left: 2%;
+  padding-right: 2%;
   border-radius: 20px;
   border: 3px solid rgb(253, 253, 253);
   color: #6b6b6b;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 14px;
   background-color: white;
+  cursor: pointer;
+  white-space: nowrap;
+
 }
 
 .Writing:hover{
@@ -303,10 +313,10 @@ html, body {
   height: 15px;
   cursor: pointer;
   position: relative;
-  margin-left: 25px;
   appearance: none;
   border-radius: 3px;
   border:2px solid #BBBBBB ;
+  margin-left: 10px;
 }
 
 
@@ -336,6 +346,10 @@ html, body {
 .Writing.green{
   border: 3px solid #008000;
 }
+
+
+
+
 
 
 

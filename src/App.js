@@ -3,11 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faBell } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react';
 
+
 function App() {
   const [isOpen, setIsOpen] = useState(true);
   const [isOpenQB, setIsOpenQB] = useState(false);
-  const [isOpenTP, setIsOpenTP] = useState(false);
-  const [isClickWT, setIsClickWT] = useState(false);
+  const [isOpenTP, setIsOpenTP] = useState(true);
+  const [isClickWT, setIsClickWT] = useState(true);
+  const [isClickSD, setIsClickSD] = useState(false);
+  const [isClickAR, setIsClickAR] = useState(false);
+  const [isClickSA, setIsClickSA] = useState(false);
+
+
+
 
   
   //Open child of PersonnelEvoluation
@@ -25,10 +32,25 @@ function App() {
     setIsOpenTP(!isOpenTP);
   };
 
+    //Check Writing
   const toggleClickWriting = () =>{
     setIsClickWT(!isClickWT);
   }
 
+    //Check Sending
+  const toggleClickSending = () =>{
+    setIsClickSD(!isClickSD);
+  }  
+
+    //Check Approved
+  const toggleClickApproved = () =>{
+    setIsClickAR(!isClickAR);
+  }
+    
+    //Check StopAplly
+  const toggleClickStopApply = () =>{
+    setIsClickSA(!isClickSA);
+  } 
 
   return (
     <div className="App">
@@ -69,13 +91,13 @@ function App() {
       <div className='PagePersonnel'>
           <div className='Header'>
             <div class="tabs">
-              <div class="tab"><span class="tab-content">-------------</span></div>
-              <div class="tab"><span class="tab-content">-------------</span></div>
-              <div class="tab"><span class="tab-content">-------------</span></div>
-              <div class="tab"><span class="tab-content">-------------</span></div>
-              <div class="tab"><span class="tab-content">-------------</span></div>
-              <div class="tab"><span class="tab-content">-------------</span></div>
-              <div class="tab"><span class="tab-content">-------------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
+              <div class="tab"><span class="tab-content">----------</span></div>
               <div class="tab" onClick={toggleOpenTabPersonnel}><span className={`tab-content ${isOpenTP ? 'green' : ''}`}>NHÂN SỰ</span></div>
               
             </div>
@@ -94,8 +116,23 @@ function App() {
             <div className='FilterGroup'>
               <div className='Groups'>
                 <div className={`Writing ${isClickWT ? 'green' : ''}`} onClick={toggleClickWriting}>
-                  <span className='SpanWriting'>Đang soạn thảo</span>
+                  <span className='SpanWriting' title='Đang soạn thảo'>Đang soạn thảo</span>
                   <input type="checkbox" className="CheckWriting" value="Writing" checked={isClickWT}></input>
+                </div>
+
+                <div className={`Writing ${isClickSD ? 'green' : ''}`} onClick={toggleClickSending}>
+                  <span className='SpanWriting' title='Gửi duyệt'>Gửi duyệt</span>
+                  <input type="checkbox" className="CheckWriting" value="Sending" checked={isClickSD}></input>
+                </div>
+
+                <div className={`Writing ${isClickAR ? 'green' : ''}`} onClick={toggleClickApproved}>
+                  <span className='SpanWriting' title='Đã duyệt'>Đã duyệt</span>
+                  <input type="checkbox" className="CheckWriting" value="Approved" checked={isClickAR}></input>
+                </div>
+
+                <div className={`Writing ${isClickSA ? 'green' : ''}`} onClick={toggleClickStopApply}>
+                  <span className='SpanWriting' title='Ngưng áp dụng'>Ngưng áp dụng</span>
+                  <input type="checkbox" className="CheckWriting" value="Sending" checked={isClickSA}></input>
                 </div>
               </div>
 
