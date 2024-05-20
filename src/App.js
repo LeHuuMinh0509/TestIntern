@@ -1,7 +1,8 @@
 import './App.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faBell } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faBell, faPlus, faFilter } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react';
+import questions from './question.json'; 
 
 
 function App() {
@@ -138,17 +139,58 @@ function App() {
 
 
               <div className='ElseOfFilter'>
+                <div className='Upload'><img className="iconUp" src="https://img.icons8.com/fluency-systems-filled/48/upload.png" alt="upload"/></div>
+                <div className='DownandAdd'><img className="iconDown" src="https://img.icons8.com/forma-regular/24/000000/download.png" alt="download"/><div>Template</div></div>
+                <div className='DownandAdd' style={{background:"#1A6634", color:"white", fontSize: "90%"}}><FontAwesomeIcon icon={faPlus}  /><div>THÊM MỚI</div></div>
 
               </div>
             </div>
 
             <div className='FilterSearch'>
-              
+              <div className='Filter1'><FontAwesomeIcon icon={faFilter} className='iconFilter' /></div>
+
+              <div className='Filter2'>
+                <h2 className='LDL'>LỌC DỮ LIỆU</h2>
+                <h2 className='RBL'>Reset bộ lọc</h2>
+              </div>
+
+              <div className='Filter3'>
+                <h2 className='Search'>Tìm kiếm</h2>
+                <div className='BoxSearch'>
+                <FontAwesomeIcon className="iconSearch" icon={faMagnifyingGlass}/>
+                <input type="input" className="InputSearch" checked={isClickSA} placeholder='Tìm theo mã và câu hỏi'></input>
+                </div>
+              </div>
+
+              <div className='Filter4'>
+                <div className='ButtonSearch'>
+                <FontAwesomeIcon className="iconSearch" icon={faMagnifyingGlass}/>
+                <div className='Tim'>Tìm</div>
+                </div>
+              </div>
+
             </div>
           </div>
 
           <div className='ShowList'>
+            <div className='Info1'>
+              <div className='ChooseAll'>
+                <input input type="checkbox" className="CheckWriting" value="Sending" checked={isClickSA}></input>
+                <div className='CH'>Câu hỏi</div>
+              </div>
+              <div className='PN'>Phân nhóm</div>
+              <div className='TGL'>Thời gian làm</div>
+              <div className='TT'>Tình trạng</div>
+              <div className="null"></div>
+            </div>
 
+            {/* {
+              questions.map( question => {
+                return(
+                  <div className='box'>{question.id}         {question.content}</div>
+                )
+              })
+            } */}
           </div>
 
           

@@ -168,6 +168,8 @@ html, body {
   width: 99.5%;
   margin-left: 0.25%;
   align-items: center;
+  filter:drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+
 }
 
 .tabs {
@@ -249,7 +251,7 @@ html, body {
   color: #BBBBBB;
 }
 
-.iconSearch:hover,
+.ElseOfHeader .iconSearch:hover,
 .iconBell:hover{
   color: #248546;
   cursor: pointer;
@@ -273,13 +275,15 @@ html, body {
 .FilterGroup{
   display: flex;
   align-items: center;
-  /* background-color: #248546; */
-  height: 60px;
+  height: 70px;
+  justify-content: space-between;
+  width: 98.5%;
+  margin-left: 10px;
+  border-bottom: 1px solid  #BDC2D2;
 }
 
 .Groups{
   display: flex;
-  padding-left: 1%;
   width: 37%;
   justify-content: space-between;
 
@@ -301,6 +305,7 @@ html, body {
   background-color: white;
   cursor: pointer;
   white-space: nowrap;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
 
 }
 
@@ -347,7 +352,251 @@ html, body {
   border: 3px solid #008000;
 }
 
+.ElseOfFilter{
+  display: flex;
+  width: 18%;
+  justify-content: space-between;
+}
 
+.Upload{
+  background-color: #ffffff;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+  font-family: 'Mulish', sans-serif;
+}
+
+.Upload:hover{
+  cursor: pointer;
+  filter: brightness(95%) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.iconUp{
+  width: 23px;
+  height: 23px;
+}
+
+.DownandAdd{
+  background-color: #ffffff;
+  padding: 3%;
+  display: flex;
+  width: 95px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+  font-family: 'Mulish', sans-serif;
+  justify-content: space-between;
+  color: #6b6b6b;
+  cursor: pointer;
+
+}
+
+.DownandAdd:hover{
+  filter: brightness(95%) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+
+}
+
+.iconDown{
+  width: 18px;
+  height: 18px;
+}
+
+.FilterSearch{
+  display: flex;
+  align-items: center;
+  height: 92px;
+  /* justify-content: space-between; */
+  width: 98.5%;
+  margin-left: 10px;
+  border-bottom: 1px solid  #BDC2D2;
+}
+
+.Filter1{
+  height: 100%;
+}
+
+.iconFilter{
+  color: #959DB3;
+  height: 20px;
+  width: 20px;
+  padding-top: 5px;
+  cursor: pointer;
+  margin-top: 7px;
+
+}
+
+.Filter2{
+  margin-left: 15px;
+  height: 100%;
+}
+
+.LDL{
+  font-family: 'Mulish', sans-serif;
+  color: #5A6276;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.RBL{
+  font-family: 'Mulish', sans-serif;
+  color: #009e00;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.Filter3{
+  height: 100%;
+  margin-left: 30px;
+}
+
+.Search{
+  font-family: 'Mulish', sans-serif;
+  color: #8d94a7;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.BoxSearch{
+  background-color: #ffffff;
+  width: 350px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  border-radius: 3px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+
+}
+
+.InputSearch{
+  width: 88%;
+  height: 75%;
+  border: none;
+  outline: none;
+  margin-left: 2%;
+  font-size: 15px;
+  font-family: 'Mulish', sans-serif;
+  
+}
+
+.BoxSearch .iconSearch{
+  height: 16px;
+  width: 20px;
+  color: #5A6276;
+}
+
+.Filter4{
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+.ButtonSearch{
+  width: 50px;
+  height: 35px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #008000;
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  /* font-weight: bold; */
+  font-size: 14px;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.ButtonSearch:hover{
+  filter: brightness(95%) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.Tim{
+  margin-left: 3%;
+}
+
+.ButtonSearch .iconSearch{
+  color: white;
+  height: 18px;
+}
+
+.ShowList{
+  width: 98.5%;
+  margin-left: 10px;
+}
+
+.Info1{
+  display: flex;
+  /* background-color: #009e00; */
+  margin-top: 30px;
+
+}
+
+.ChooseAll{
+  display: flex;
+  /* background-color: #fa0606; */
+  width: 45%;
+  cursor: pointer;
+}
+
+.ChooseAll .CheckWriting{
+  margin-left: 15px;
+}
+
+.CH{
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #5A6276;
+
+}
+
+.PN{
+  /* background-color: #6b6b6b; */
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  width: 20%;
+  color: #5A6276;
+  font-weight: bold;
+
+}
+
+.TGL{
+  /* background-color: #030303; */
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  width: 15%;
+  text-align: center;
+  color: #5A6276;
+  font-weight: bold;
+
+}
+
+.TT{
+  /* background-color: #08d857; */
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  width: 16%;
+  text-align: center;
+  color: #5A6276;
+  font-weight: bold;
+
+}
+
+.null{
+  /* background-color: aqua; */
+  width: 4%;
+}
 
 
 

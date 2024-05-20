@@ -1,0 +1,29 @@
+[
+    {
+        "id": "Q.001",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "thời gian làm": "30s",
+        "tình trạng": "Gửi duyệt",
+        "loại": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.002",
+        "content": "Hệ thống cửa hang Hachi Hachi có cửa hàng ở bao nhiêu tỉnh thành ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "thời gian làm": "25s",
+        "tình trạng": "Gửi duyệt",
+        "loại": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.003",
+        "content": "Hệ thống cửa hang Hachi Hachi có cửa hàng ở bao nhiêu tỉnh thành ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "thời gian làm": "25s",
+        "tình trạng": "Phê duyệt",
+        "loại": "Dạng câu một lựa chọn"
+    },
+    {
+
+    }
+]
