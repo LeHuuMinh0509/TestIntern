@@ -77,12 +77,18 @@ html, body {
   margin-left: 2%;
   text-align: center;
   background-color: #5A6276;
+  /* border-left: 10px solid rgb(189, 22, 22); */
+
 }
+
+/* .ChildPersonelEvaluation:hover{
+  border-left: 10px solid rgb(206, 153, 153);
+} */
 
 .h3PersonelEvaluation{
   font-family: 'Mulish', sans-serif;
   font-size: 17px;
-  text-shadow: -2px 2px #4e4e4e;
+  /* text-shadow: -2px 2px #4e4e4e; */
   color: white;
   
 }
@@ -94,13 +100,13 @@ html, body {
 
 
 
-.PersonelEvaluation.green .iconCheckList,
-.PersonelEvaluation.green .h3PersonelEvaluation,
-.PersonelEvaluation.green .iconChePer {
+.PersonelEvaluation.active .iconCheckList,
+.PersonelEvaluation.active .h3PersonelEvaluation,
+.PersonelEvaluation.active .iconChePer {
   color: #5CB800;
 }
 
-.PersonelEvaluation.green{
+.PersonelEvaluation.active{
   background-color: #5CB800;
 }
 
@@ -111,7 +117,7 @@ html, body {
 .QuestionBank{
   display: block;
   height: 60px;
-  background-color: rgb(209, 207, 207);
+  background-color: #5A6276;
 }
 
 .childQuestionBank{
@@ -121,17 +127,19 @@ html, body {
   width: 98%;
   margin-left: 2%;
   text-align: center;
-  background-color: #474F63;
+  background-color: #5A6276;
   padding-left: 6%;
+  
 }
 
 .childQuestionBank .iconQuestion{
-  color: white;
+  color: #959DB3;
 
 }
 
+
 .childQuestionBank .h3QuestionBank {
-  color: white;
+  color: #959DB3;
   font-family: 'Mulish', sans-serif;
   text-shadow: -2px 2px #4e4e4e;
   font-size: 16px;
@@ -140,20 +148,24 @@ html, body {
 
 .childQuestionBank:hover .iconQuestion,
 .childQuestionBank:hover .h3QuestionBank{
-  color: #5CB800;
+  color: #ffffff;
+}
+
+.childQuestionBank.active{
+  background-color: #474F63;
 }
 
 .QuestionBank:hover{
-  background-color: #5CB800;
+  background-color: #ffffff;
 }
 
-.QuestionBank.green .iconQuestion,
-.QuestionBank.green .h3QuestionBank{
-  color: #5CB800;
+.QuestionBank.active .iconQuestion,
+.QuestionBank.active .h3QuestionBank{
+  color: #ffffff;
 }
 
-.QuestionBank.green{
-  background-color: #5CB800;
+.QuestionBank.active{
+  background-color: #ffffff;
 }
 
 
@@ -168,8 +180,10 @@ html, body {
   width: 99.5%;
   margin-left: 0.25%;
   align-items: center;
-  filter:drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
-
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* background-color: #008000; */
+  padding-right: 2%;
+  box-sizing: border-box;
 }
 
 .tabs {
@@ -177,20 +191,32 @@ html, body {
   font-family: 'Mulish', sans-serif;
   color: #BBBBBB;
   font-weight: bold;
-  width: 60%;
-
-}
-.tab {
+  width: 845px;
+  height: 100%;
+  align-items: center;
+  gap: 15px;
   padding-left: 2%;
-  padding-right: 2%;
+}
+
+.LineTab{
+  background-color: #C4C4C4;
+  width: 2.5px;
+  height: 30px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.tab {
+  /* padding-left: 2%;
+  padding-right: 2%; */
   white-space: nowrap;
   position: relative;
   
 }
-.tab:not(:last-child)::after {
+/* .tab:not(:last-child)::after {
   content: '|';
   padding-left: 27%;
-}
+} */
 
 .tab-content {
   display: inline-block;
@@ -200,10 +226,9 @@ html, body {
 .tab-content:hover{
   cursor: pointer;
   color: #248546;
-
 }
 
-.tab:hover .tab-content::after {
+/* .tab:hover .tab-content::after {
   content: '';
   display: block;
   position: absolute;
@@ -212,11 +237,11 @@ html, body {
   width: 100%;
   height: 3px;
   background-color: #248546;
-}
+} */
 
 
 
-.tab-content.green::after{
+.tab-content.active::after{
   content: '';
   display: block;
   position: absolute;
@@ -228,7 +253,7 @@ html, body {
   
 }
 
-.tab-content.green{
+.tab-content.active{
   color: #248546;
 }
 
@@ -236,9 +261,9 @@ html, body {
   /* background-color: #248546; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 8%;
-  margin-left: 30%;
+  justify-content: flex-end;
+  gap: 15px;
+  width: calc(100% - 845px);
 }
 
 .iconSearch{
@@ -285,8 +310,7 @@ html, body {
 .Groups{
   display: flex;
   width: 37%;
-  justify-content: space-between;
-
+  gap: 15px
 }
 
 .Writing{
@@ -298,19 +322,20 @@ html, body {
   padding-left: 2%;
   padding-right: 2%;
   border-radius: 20px;
-  border: 3px solid rgb(253, 253, 253);
+  border: 2px solid rgb(253, 253, 253);
   color: #6b6b6b;
   font-family: 'Mulish', sans-serif;
   font-size: 14px;
   background-color: white;
   cursor: pointer;
   white-space: nowrap;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      /* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2)); */
 
 }
 
 .Writing:hover{
-  border: 3px solid #008000;
+  border: 2px solid #008000;
 }
 
 .CheckWriting {
@@ -339,23 +364,24 @@ html, body {
 .CheckWriting:checked::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: 3.5px;
-  width: 2.2px;
-  height: 10px;
+  top: -1px;
+  left: 4px;
+  width: 2px;
+  height: 8.5px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
 
-.Writing.green{
-  border: 3px solid #008000;
+.Writing.active{
+  border: 2px solid #008000;
 }
 
 .ElseOfFilter{
   display: flex;
   width: 18%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 15px;
 }
 
 .Upload{
@@ -401,8 +427,8 @@ html, body {
 }
 
 .iconDown{
-  width: 18px;
-  height: 18px;
+  width: 23px;
+  height: 23px;
 }
 
 .FilterSearch{
@@ -445,12 +471,14 @@ html, body {
 
 .RBL{
   font-family: 'Mulish', sans-serif;
-  color: #009e00;
+  color: #008000;
   font-size: 15px;
   text-decoration: underline;
   cursor: pointer;
   margin-top: 20px;
+  
 }
+
 
 .Filter3{
   height: 100%;
@@ -506,6 +534,7 @@ html, body {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  justify-content: center;
   background-color: #008000;
   color: white;
   font-family: 'Mulish', sans-serif;
@@ -531,6 +560,7 @@ html, body {
 .ShowList{
   width: 98.5%;
   margin-left: 10px;
+  /* overflow-x: auto; */
 }
 
 .Info1{
@@ -543,12 +573,15 @@ html, body {
 .ChooseAll{
   display: flex;
   /* background-color: #fa0606; */
-  width: 45%;
-  cursor: pointer;
+  width: 55%;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 
-.ChooseAll .CheckWriting{
-  margin-left: 15px;
+.BoxChooseAll{
+  display: flex;
+  /* background-color: #1e06fa; */
+  cursor: pointer;
 }
 
 .CH{
@@ -568,6 +601,8 @@ html, body {
   width: 20%;
   color: #5A6276;
   font-weight: bold;
+  font-size: 15px;
+
 
 }
 
@@ -575,10 +610,12 @@ html, body {
   /* background-color: #030303; */
   color: white;
   font-family: 'Mulish', sans-serif;
-  width: 15%;
+  width: 10%;
   text-align: center;
   color: #5A6276;
   font-weight: bold;
+  font-size: 15px;
+
 
 }
 
@@ -586,20 +623,263 @@ html, body {
   /* background-color: #08d857; */
   color: white;
   font-family: 'Mulish', sans-serif;
-  width: 16%;
-  text-align: center;
+  width: 12.5%;
+  text-align: right;
   color: #5A6276;
   font-weight: bold;
-
+  font-size: 15px;
+  padding-right: 2%;
+  box-sizing: border-box;
 }
 
 .null{
   /* background-color: aqua; */
-  width: 4%;
+  width: 2.5%;
 }
 
 
+.CheckAll {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border-radius: 3px;
+  border:2px solid #BBBBBB ;
+}
+
+.BoxChooseAll:hover .CheckAll {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
+
+.CheckAll:checked {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
 
 
+.CheckAll:checked::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 4px;
+  width: 2px;
+  height: 8.5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 
+.List{
+  /* background-color: yellow; */
+  /* height: 500px; */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.ShowQuestion {
+  background-color: white;
+  display: flex;
+  padding-left: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.ShowQuestion:hover{
+  background-color: #5A8F6D;
+  cursor: pointer;
+
+}
+
+.InfoQuestion{
+  /* background-color: aqua; */
+  display: flex;
+  height: 65px;
+  width: 55%;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.ThreeInfo {
+  /* background-color: #22009e; */
+  /* display: flex; 
+  flex-direction: column; 
+  gap: 0px; */
+  /* align-items: center; */
+  /* justify-content: space-between ;  */
+  padding-top: 10px;
+  width: 92%;
+
+}
+
+.Content{
+  font-family: 'Mulish', sans-serif;
+  width: 100%;
+  /* background-color: #009e00; */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.TwoInfo{
+  /* background-color: burlywood; */
+  display: flex;
+  margin-top: 10px;
+}
+
+.Id{
+  /* background-color: #5CB800; */
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  /* width: 8%; */
+}
+
+.Line{
+  border-left: 2px solid #8BA89F;
+  margin-left: 8px;
+  margin-right: 8px;
+  /* background-color: blue; */
+}
+
+.Type{
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+}
+
+.Group{
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  /* background-color: yellow; */
+}
+
+.Time{
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 10%;
+  /* background-color: rgb(112, 112, 90); */
+}
+
+.Status{
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 12.5%;
+  /* background-color: #5A8F6D; */
+  padding-right: 2%;
+  box-sizing: border-box;
+}
+
+.Extension{
+  border-left: 1px solid #BDC2D2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5%;
+  /* background-color: #5A8F6D; */
+  font-family: 'Mulish', sans-serif;
+}
+
+.ThreeDot{
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.ThreeDot:hover,
+.ThreeDot:hover
+.ImgThreeDot path{
+  background-color: #BDC2D2;
+  fill: white;
+  /* border: 1px solid rgb(255, 0, 0); */
+}
+
+.ImgThreeDot path {
+  fill: #959DB3;
+}
+
+.CheckQuestion {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border-radius: 3px;
+  border:2px solid #BBBBBB ;
+  top:30%
+}
+
+.ShowQuestion:hover .CheckQuestion {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
+
+.CheckQuestion:checked {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
+
+
+.CheckQuestion:checked::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 4px;
+  width: 2px;
+  height: 8.5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.ShowQuestion.active{
+  background-color: #5A8F6D;
+}
+
+.BoxExtentsion {
+  background-color: #BDC2D2;
+  position: absolute;
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  left: 1407px;
+  /* top: 18px; */
+}
+
+.ExtEdit,
+.ExtDelete{
+  display: flex;
+  gap: 20px;
+}
+
+.iconPencil,
+.iconTrash{
+  color: white;
+}
+
+.CheckAlla{
+  accent-color: rgb(248, 4, 4);
+}
 
