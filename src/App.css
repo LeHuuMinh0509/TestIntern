@@ -259,22 +259,57 @@ html, body {
 
 .ElseOfHeader{
   /* background-color: #248546; */
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 20px;
   width: calc(100% - 845px);
 }
 
-.iconSearch{
-  height: 20px;
-  color: #BBBBBB;
+.SearchHeader:hover{
+  cursor: pointer;
 }
 
-.iconBell{
-  height: 20px;
-  color: #BBBBBB;
+.SearchHeader:hover
+.ImgSearch path{
+  fill: #1A6634;
 }
+
+.RengNoti{
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  height: 100%;
+  position: relative;
+}
+
+.RengNoti:hover{
+  cursor: pointer;
+
+}
+
+.RengNoti:hover .ImgReng path {
+  fill: #1A6634;
+}
+
+.Noti{
+  width: 20px;
+  height: 20px;
+  background-color: #F1802E;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: -8px;
+  position: absolute;
+  color: white;
+  font-size: 11px;
+  font-family: 'Mulish', sans-serif;
+}
+
+
 
 .ElseOfHeader .iconSearch:hover,
 .iconBell:hover{
@@ -282,9 +317,17 @@ html, body {
   cursor: pointer;
 }
 
+.AvtFull{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
 .circleAvt{
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #5CB800;
   overflow: hidden;
@@ -295,6 +338,19 @@ html, body {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+}
+
+.Online{
+  width: 12px;
+  height: 12px;
+  background-color: #05D103;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 37px;
+  right: 0px;
+  position: absolute;
 }
 
 .FilterGroup{
@@ -386,7 +442,7 @@ html, body {
 
 .Upload{
   background-color: #ffffff;
-  padding: 2%;
+  padding: 2.5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,18 +463,21 @@ html, body {
 
 .DownandAdd{
   background-color: #ffffff;
-  padding: 3%;
   display: flex;
+  gap: 5px;
   width: 95px;
+  padding-left: 1%;
+  padding-right: 1%;
+  /* box-sizing: border-box; */
   align-items: center;
   justify-content: center;
   border-radius: 3px;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
   font-family: 'Mulish', sans-serif;
-  justify-content: space-between;
   color: #6b6b6b;
   cursor: pointer;
-
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 .DownandAdd:hover{
@@ -684,11 +743,22 @@ html, body {
 .ShowQuestion {
   background-color: white;
   display: flex;
-  padding-left: 15px;
   box-sizing: border-box;
   width: 100%;
   position: relative;
+  padding-left: 15px;
+  white-space: nowrap;
+
 }
+
+
+/* .ShowQuestionClick {
+  background-color: white;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+} */
 
 .ShowQuestion:hover{
   background-color: #5A8F6D;
@@ -721,7 +791,6 @@ html, body {
   font-family: 'Mulish', sans-serif;
   width: 100%;
   /* background-color: #009e00; */
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 15px;
@@ -795,13 +864,27 @@ html, body {
   font-family: 'Mulish', sans-serif;
 }
 
+/* .Extension:hover {
+  background-color: #5A8F6D;
+} */
+
+
 .ThreeDot{
   width: 80%;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px; */
   border-radius: 3px;
+}
+
+.ThreeDot.active,
+.ThreeDot.active
+.ImgThreeDot path{
+  background-color: #BDC2D2;
+  fill: white;
 }
 
 .ThreeDot:hover,
@@ -832,6 +915,11 @@ html, body {
   border: 2px solid #008000;
 }
 
+.ShowQuestionClick:hover .CheckQuestion {
+  background-color: #008000;
+  border: 2px solid #008000;
+}
+
 .CheckQuestion:checked {
   background-color: #008000;
   border: 2px solid #008000;
@@ -854,9 +942,14 @@ html, body {
   background-color: #5A8F6D;
 }
 
+/* .ShowQuestionClick.active{
+  background-color: #5A8F6D;
+} */
+
 .BoxExtentsion {
   background-color: #BDC2D2;
   position: absolute;
+  z-index: 1000;
   font-family: 'Mulish', sans-serif;
   font-size: 15px;
   color: white;
@@ -864,18 +957,18 @@ html, body {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  left: 1407px;
-  /* top: 18px; */
+  right: 35px;
+  top: 18px;
+  white-space: nowrap;
 }
 
-.ExtEdit,
-.ExtDelete{
+
+.ExtOpsion{
   display: flex;
   gap: 20px;
 }
 
-.iconPencil,
-.iconTrash{
+.iconExtension{
   color: white;
 }
 
@@ -883,3 +976,14 @@ html, body {
   accent-color: rgb(248, 4, 4);
 }
 
+/* .List .ShowQuestion:hover {
+  background-color: #5A8F6D;
+}
+
+.List .ShowQuestion:hover .ShowQuestionClick {
+  background-color: #5A8F6D;
+}
+
+.List .ShowQuestion:hover .Extension {
+  background-color: #5A8F6D; 
+} */

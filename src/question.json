@@ -22,6 +22,22 @@
         "time": "30s",
         "status": "Ngưng áp dụng",
         "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.004",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.005",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
     }
     
 ]
