@@ -1,6 +1,6 @@
 import './App.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faFilter, faPencil, faTrash } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faPencil, faTrash } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react';
 import questions from './question.json'; 
 
@@ -18,6 +18,8 @@ function App() {
   const [activeQuestions, setActiveQuestions] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
   const [isClickDot, setIsClickDot] = useState('');
+  const [filterStatus, setFilterStatus] = useState(["Đang soạn thảo", "Trả về"]);
+  const [quatityQuestion, setQuatityQuestion] = useState(0);
 
 
 
@@ -41,29 +43,63 @@ function App() {
   };
 
     //Check Writing
-  const toggleClickWriting = () =>{
+  const toggleClickWriting = () => {
     setIsClickWT(!isClickWT);
-  }
+    setFilterStatus(prevStatus => 
+      !isClickWT 
+        ? [...prevStatus, "Đang soạn thảo", "Trả về"]
+        : prevStatus.filter(status => status !== "Đang soạn thảo" && status !== "Trả về")
+    );
+  };
 
-    //Check Sending
-  const toggleClickSending = () =>{
+   //Check Sending
+  const toggleClickSending = () => {
     setIsClickSD(!isClickSD);
-  }  
+    setFilterStatus(prevStatus => 
+      !isClickSD 
+        ? [...prevStatus, "Gửi duyệt"]
+        : prevStatus.filter(status => status !== "Gửi duyệt")
+    );
+  };
 
-    //Check Approved
-  const toggleClickApproved = () =>{
+  //Check Approved
+  const toggleClickApproved = () => {
     setIsClickAR(!isClickAR);
-  }
-    
-    //Check StopAplly
-  const toggleClickStopApply = () =>{
-    setIsClickSA(!isClickSA);
-  } 
+    setFilterStatus(prevStatus => 
+      !isClickAR 
+        ? [...prevStatus, "Duyệt áp dụng"]
+        : prevStatus.filter(status => status !== "Duyệt áp dụng")
+    );
+  };
 
-    //Check ChooseAll
-  const toggleClickChooseAll = () =>{
+  //Check StopAplly
+  const toggleClickStopApply = () => {
+    setIsClickSA(!isClickSA);
+    setFilterStatus(prevStatus => 
+      !isClickSA 
+        ? [...prevStatus, "Ngưng áp dụng"]
+        : prevStatus.filter(status => status !== "Ngưng áp dụng")
+    );
+  };
+
+  const filteredQuestions = filterStatus.length > 0
+    ? questions.filter(question => filterStatus.includes(question.status))
+    : questions;
+
+
+  //Check ChooseAll
+  const toggleClickChooseAll = () => {
     setIsClickAll(!isClickAll);
-  }  
+    if (!isClickAll) {
+      const filteredQuestions = questions.filter(question => filterStatus.includes(question.status));
+      const allQuestionIds = filteredQuestions.map(question => question.id);
+      setActiveQuestions(allQuestionIds);
+      setQuatityQuestion(allQuestionIds.length)
+    } else {
+      setActiveQuestions([]);
+      setQuatityQuestion(0)
+    }
+  };
 
     //Check CheckQ
   // const toggleClickCheckQ = () =>{
@@ -74,10 +110,14 @@ function App() {
   const toggleActiveQuestion = (id) => {
     // alert(id)
     // alert(activeQuestions);
+    // alert(quatityQuestion);
     if (activeQuestions.includes(id)) {
       setActiveQuestions(activeQuestions.filter(q => q !== id));
+      setQuatityQuestion(quatityQuestion-1);
+      setIsClickAll(false)
     } else {
       setActiveQuestions([...activeQuestions, id]);
+      setQuatityQuestion(quatityQuestion+1);
     }
   };
 
@@ -176,7 +216,11 @@ function App() {
 
           </div>
 
+
           <div className='Filter'>
+            {quatityQuestion >0 && (
+            <><div className='DivDisabled'></div></>
+            )}
             <div className='FilterGroup'>
               <div className='Groups'>
                 <div className={`Writing ${isClickWT ? 'active' : ''}`} onClick={toggleClickWriting}>
@@ -211,7 +255,7 @@ function App() {
                   <path d="M11.0667 8.14908C10.9552 8.14732 10.8445 8.16821 10.7414 8.2105C10.6383 8.25279 10.5448 8.31558 10.4666 8.39508L9.41162 9.45008L9.41162 0.873085C9.41552 0.759871 9.39659 0.647032 9.35595 0.54129C9.31532 0.435548 9.25381 0.339068 9.1751 0.2576C9.09639 0.176131 9.00208 0.111341 8.8978 0.0670917C8.79351 0.022842 8.68139 3.79304e-05 8.56811 3.79304e-05C8.45482 3.79304e-05 8.3427 0.022842 8.23842 0.0670917C8.13413 0.111341 8.03983 0.176131 7.96111 0.2576C7.8824 0.339068 7.82089 0.435548 7.78026 0.54129C7.73962 0.647032 7.72069 0.759871 7.72459 0.873085L7.72459 9.52008L6.59956 8.39508C6.44037 8.23607 6.22456 8.14675 5.99955 8.14675C5.77454 8.14675 5.55873 8.23607 5.39954 8.39508C5.2457 8.55697 5.15991 8.77176 5.15991 8.99508C5.15991 9.21841 5.2457 9.4332 5.39954 9.59508L7.93859 12.1211C8.01673 12.2006 8.11021 12.2634 8.21335 12.3057C8.31649 12.348 8.42715 12.3689 8.5386 12.3671V12.3671C8.65006 12.3689 8.76072 12.348 8.86386 12.3057C8.967 12.2634 9.06048 12.2006 9.13862 12.1211L11.6647 9.59008C11.8185 9.4282 11.9043 9.21341 11.9043 8.99008C11.9043 8.76676 11.8185 8.55197 11.6647 8.39008C11.5052 8.23183 11.2894 8.14336 11.0647 8.14408L11.0667 8.14908Z" fill="#959DB3"/></svg>
                   <div>Template</div>
                 </div>
-                <div className='DownandAdd' style={{background:"#1A6634", color:"white", fontSize: "13px"}}><svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className='DownandAdd' style={{background:"#1A6634", color:"white", fontSize: "13px", boxShadow:"#A9DCF7 0px 10px 36px 0px, #A9DCF7 0px 0px 0px 1px"}}><svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.17578 1V11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 6H7.35135" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 THÊM MỚI</div>
@@ -220,11 +264,13 @@ function App() {
             </div>
 
             <div className='FilterSearch'>
-              <div className='Filter1'><FontAwesomeIcon icon={faFilter} className='iconFilter' /></div>
+              <div className='Filter1'><svg width="15" height="16" viewBox="0 0 15 16" fill="none" className="iconFilter" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.22953 16C6.10003 16 5.97172 15.9752 5.85153 15.927C5.65287 15.8457 5.48278 15.7073 5.36281 15.5293C5.24283 15.3513 5.17835 15.1417 5.17753 14.927V10.857L0.343534 6.265C0.185521 6.11369 0.0755585 5.9192 0.0273653 5.7058C-0.0208279 5.4924 -0.00511853 5.26953 0.0725336 5.065C0.14362 4.86299 0.274889 4.6876 0.44867 4.56245C0.622452 4.4373 0.830404 4.36839 1.04453 4.365H2.36053V1.092C2.35571 0.807656 2.46387 0.533009 2.66127 0.328296C2.85867 0.123584 3.1292 0.00551974 3.41353 0L9.37753 0C9.66169 0.00578099 9.93197 0.123959 10.1292 0.328643C10.3263 0.533327 10.4344 0.807826 10.4295 1.092V1.82H11.8295C12.1139 1.82552 12.3844 1.94358 12.5818 2.1483C12.7792 2.35301 12.8874 2.62766 12.8825 2.912V4.369H13.9455C14.1614 4.37159 14.3714 4.43999 14.5474 4.56507C14.7234 4.69015 14.8571 4.86595 14.9305 5.069C15.0062 5.27554 15.0198 5.49973 14.9695 5.71387C14.9192 5.92802 14.8073 6.12275 14.6475 6.274L9.73853 11.031V12.2C9.73506 12.469 9.63416 12.7277 9.45453 12.928L7.00153 15.654C6.90432 15.7626 6.78535 15.8495 6.65234 15.9091C6.51934 15.9687 6.37528 15.9997 6.22953 16V16ZM1.04153 5.461L6.21953 10.376V14.927L8.67553 12.2V10.557L13.9345 5.457L1.04153 5.461ZM3.41353 1.092V4.369H11.8335V2.912H9.37753V1.092H3.41353Z" fill="#959DB3"/></svg>
+              </div>
 
               <div className='Filter2'>
-                <h2 className='LDL'>LỌC DỮ LIỆU</h2>
-                <h2 className='RBL'>Reset bộ lọc</h2>
+                <div className='LDL'>LỌC DỮ LIỆU</div>
+                <div className='RBL'>Reset bộ lọc</div>
               </div>
 
               <div className='Filter3'>
@@ -248,8 +294,8 @@ function App() {
           <div className='ShowList'>
             <div className='Info1'>
               <div className="ChooseAll">
-                <div className={`BoxChooseAll ${isClickAll ? 'active' : ''}`} onClick={toggleClickChooseAll}>
-                  <input input type="checkbox" className="CheckAll" value="" checked={isClickAll}></input>
+                  <div className={`BoxChooseAll ${isClickAll ? 'active' : ''}`} onClick={toggleClickChooseAll}>
+                  <input type="checkbox" className="CheckAll" value="" checked={isClickAll}></input>
                   <div className='CH'>Câu hỏi</div>
                 </div>
               </div>
@@ -260,7 +306,7 @@ function App() {
             </div>
 
             <div className='List'> 
-              {questions.map(question => (
+            {filteredQuestions.map(question => (
                 <div className={`ShowQuestion ${activeQuestions.includes(question.id) ? 'active' : ''}`} onClick={() => toggleActiveQuestion(question.id)}>
                   {/* <div className={`ShowQuestionClick ${activeQuestions.includes(question.id) ? 'active' : ''}`} onClick={() => toggleActiveQuestion(question.id)}> */}
                     <div className='InfoQuestion'>
@@ -386,11 +432,44 @@ function App() {
                 </div>         
               ))}
             </div>
+            {quatityQuestion >0 && (
+                <>
+                  <div className='PopUp'>
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>                    
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>                    
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>                    
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>                    
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>
+                    <div className='QuatityChoose'>
+                      <div className='NumberQuatity'>{quatityQuestion}</div>
+                      <div className='DC'>Đã chọn</div>
+                    </div>
+                  </div>
+                </>
+              )}
           </div>
 
           
           <div className='ShowPage'>
-
           </div>
       </div>
     </div>

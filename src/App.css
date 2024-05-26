@@ -20,13 +20,12 @@ html, body {
 
 .Menu {
   background-color: #5A6276;
-  flex: 0 1 300px;
+  width: 300px;
   flex-direction: column;
 }
 
 .PagePersonnel {
-  background-color: bisque;
-  flex: 1;
+  width: calc(100% - 300px);
 }
 
 .LogoHachi{
@@ -182,7 +181,6 @@ html, body {
   align-items: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /* background-color: #008000; */
-  padding-right: 2%;
   box-sizing: border-box;
 }
 
@@ -263,8 +261,14 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 33px;
+  padding-right: 1%;
   width: calc(100% - 845px);
+}
+
+.SearchHeader{
+  display: flex;
+  align-items: center;
 }
 
 .SearchHeader:hover{
@@ -353,6 +357,10 @@ html, body {
   position: absolute;
 }
 
+.Filter{
+  position: relative;
+}
+
 .FilterGroup{
   display: flex;
   align-items: center;
@@ -361,12 +369,13 @@ html, body {
   width: 98.5%;
   margin-left: 10px;
   border-bottom: 1px solid  #BDC2D2;
+  
 }
 
 .Groups{
   display: flex;
-  width: 37%;
-  gap: 15px
+  width: 584px;
+  gap: 15px;
 }
 
 .Writing{
@@ -435,20 +444,20 @@ html, body {
 
 .ElseOfFilter{
   display: flex;
-  width: 18%;
-  /* justify-content: space-between; */
+  width: calc(98.5% - 584px);
+  height: 34px;
   gap: 15px;
+  justify-content: flex-end;
 }
 
 .Upload{
   background-color: #ffffff;
-  padding: 2.5%;
+  padding: 1%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
-  font-family: 'Mulish', sans-serif;
 }
 
 .Upload:hover{
@@ -478,6 +487,7 @@ html, body {
   cursor: pointer;
   white-space: nowrap;
   font-size: 14px;
+  /* box-shadow: #A9DCF7 0px 10px 36px 0px, #A9DCF7 0px 0px 0px 1px; */
 }
 
 .DownandAdd:hover{
@@ -517,12 +527,18 @@ html, body {
 .Filter2{
   margin-left: 15px;
   height: 100%;
+  /* background-color: #05D103; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 12px;
+  box-sizing: border-box;
 }
 
 .LDL{
   font-family: 'Mulish', sans-serif;
   color: #5A6276;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   font-weight: bold;
 
@@ -531,7 +547,7 @@ html, body {
 .RBL{
   font-family: 'Mulish', sans-serif;
   color: #008000;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
   margin-top: 20px;
@@ -542,12 +558,15 @@ html, body {
 .Filter3{
   height: 100%;
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
 }
 
 .Search{
   font-family: 'Mulish', sans-serif;
   color: #8d94a7;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -582,23 +601,28 @@ html, body {
 
 .Filter4{
   margin-left: 15px;
-  margin-top: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  box-sizing: border-box;
 }
 
 .ButtonSearch{
-  width: 50px;
-  height: 35px;
+  /* width: 50px;
+  height: 35px; */
   border-radius: 3px;
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  padding: 9px;
   justify-content: center;
   background-color: #008000;
   color: white;
   font-family: 'Mulish', sans-serif;
   /* font-weight: bold; */
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
 }
@@ -620,6 +644,10 @@ html, body {
   width: 98.5%;
   margin-left: 10px;
   /* overflow-x: auto; */
+  position: relative;
+  /* background-color: #05D103; */
+  height: 65vh;
+
 }
 
 .Info1{
@@ -643,6 +671,19 @@ html, body {
   cursor: pointer;
 }
 
+.ChooseAllDis{
+  display: flex;
+  /* background-color: #fa0606; */
+  width: 55%;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.BoxChooseAllDis{
+  display: flex;
+  /* background-color: #1e06fa; */
+}
+
 .CH{
   color: white;
   font-family: 'Mulish', sans-serif;
@@ -661,8 +702,6 @@ html, body {
   color: #5A6276;
   font-weight: bold;
   font-size: 15px;
-
-
 }
 
 .TGL{
@@ -704,7 +743,16 @@ html, body {
   position: relative;
   appearance: none;
   border-radius: 3px;
-  border:2px solid #BBBBBB ;
+  border:1px solid #BBBBBB ;
+}
+
+.CheckAllDis {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  appearance: none;
+  border-radius: 3px;
+  border:1px solid #BBBBBB ;
 }
 
 .BoxChooseAll:hover .CheckAll {
@@ -732,7 +780,6 @@ html, body {
 
 .List{
   /* background-color: yellow; */
-  /* height: 500px; */
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -794,7 +841,7 @@ html, body {
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .TwoInfo{
@@ -811,7 +858,7 @@ html, body {
 }
 
 .Line{
-  border-left: 2px solid #8BA89F;
+  border-left: 1px solid #BDC2D2;
   margin-left: 8px;
   margin-right: 8px;
   /* background-color: blue; */
@@ -906,11 +953,18 @@ html, body {
   position: relative;
   appearance: none;
   border-radius: 3px;
-  border:2px solid #BBBBBB ;
+  border:1px solid #BBBBBB ;
+  /* border: 2px solid white; */
+
   top:30%
 }
 
 .ShowQuestion:hover .CheckQuestion {
+  background-color: #ffffff;
+  border:1px solid #BBBBBB ;
+}
+
+.ShowQuestion.active:hover .CheckQuestion {
   background-color: #008000;
   border: 2px solid #008000;
 }
@@ -987,3 +1041,44 @@ html, body {
 .List .ShowQuestion:hover .Extension {
   background-color: #5A8F6D; 
 } */
+
+.PopUp{
+  background-color: rgb(255, 0, 0);
+  display: flex;
+  gap: 20px;
+  border-radius: 3px;
+  width: 650px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.QuatityChoose{
+  background-color: #008000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 5px; */
+  font-family: 'Mulish', sans-serif;
+  color: white;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+}
+
+.NumberQuatity{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.DC{
+  font-size: 13px;
+}
+
+.DivDisabled{
+  background-color: transparent;
+  z-index: 1000;
+  height: 164px;
+  width: 1610px;
+  position: absolute;
+}
