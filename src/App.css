@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Mulish');
+/* @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"; */
 
 html, body {
   margin: 0;
@@ -785,6 +786,8 @@ html, body {
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  height: 600px;
+  overflow-x: scroll;
 }
 
 .ShowQuestion {
@@ -1010,7 +1013,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 15px;
   right: 35px;
   top: 18px;
   white-space: nowrap;
@@ -1030,29 +1033,22 @@ html, body {
   accent-color: rgb(248, 4, 4);
 }
 
-/* .List .ShowQuestion:hover {
-  background-color: #5A8F6D;
-}
-
-.List .ShowQuestion:hover .ShowQuestionClick {
-  background-color: #5A8F6D;
-}
-
-.List .ShowQuestion:hover .Extension {
-  background-color: #5A8F6D; 
-} */
-
 .PopUp{
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
   display: flex;
-  gap: 20px;
-  border-radius: 3px;
-  width: 650px;
+  gap: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  white-space: nowrap;
+  width: auto;
+  padding-right: 3%;
 }
+
 
 .QuatityChoose{
   background-color: #008000;
@@ -1060,15 +1056,19 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 5px; */
+  gap: 2px;
   font-family: 'Mulish', sans-serif;
   color: white;
-  padding: 0.5% 1.5% 0.5% 1.5%;
+  padding: 0.5% 3% 1.5% 3%;
+  /* width: 91px;
+  height: 67px; */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
 }
 
 .NumberQuatity{
   font-size: 30px;
-  font-weight: 600;
 }
 
 .DC{
@@ -1082,3 +1082,137 @@ html, body {
   width: 1610px;
   position: absolute;
 }
+
+.OptionPopUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-family: 'Mulish', sans-serif;
+  cursor: pointer;
+  /* background-color: #05D103; */
+}
+
+
+.TextOpPU{
+  font-size: 13px;
+  color: black;
+}
+
+.LinePU{
+  border-left: 1px solid #BDC2D2;
+  height: 50px;
+}
+
+.OptionCancle{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: -15px; 
+  /* background-color: rgb(255, 0, 0); */
+  cursor: pointer;
+  padding-right: 3%;
+
+}
+
+.OptionCancle:hover .iconOpCancle path{
+  fill: #FD7676;
+}
+
+/* .iconOpCancle path:hover{
+
+} */
+
+.OptionPopUp:hover .iconOpPU path,
+.OptionPopUp:hover .TextOpPU {
+  fill: #FD7676;
+  /* stroke: #FD7676; */
+  color: #FD7676;
+}
+
+.ShowPage{
+  background-color: red;
+  z-index: 1000;
+  transform: translate(0%, 7px);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 13px;
+}
+
+.pagination-container button {
+  background: #F4F5F7;
+  border: none;
+  padding: 9px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #959DB3;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 5px;
+  gap: 10px;
+}
+
+.pagination li {
+  display: inline-block;
+}
+
+.pagination li a {
+  display: block;
+  border-radius: 3px;
+  color: #959DB3;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 6px;
+
+}
+
+.pagination li.active a {
+  background: #959DB3;
+  color: white;
+}
+
+.pagination li a:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.break-me {
+}
+
+.previous-button, .next-button {
+  display: inline-block;
+}
+
+.previous-link, .next-link {
+  display: flex;
+  border-radius: 3px;
+  text-decoration: none;
+  background: #ffffff;
+  cursor: pointer;
+
+}
+
+.previous-link:hover, .next-link:hover {
+  background: #D1D5DB;
+}
+
+
+

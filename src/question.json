@@ -36,8 +36,769 @@
         "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
         "groups": "Thương hiệu, văn hóa công ty",
         "time": "30s",
-        "status": "Trả về",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.006",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.007",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
         "type": "Dạng câu một lựa chọn"
     }
+    ,
+    {
+        "id": "Q.008",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.009",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.010",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.011",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.012",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.013",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.014",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.015",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.016",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.017",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.018",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.019",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.020",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.021",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.022",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.023",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.024",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.025",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.026",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.027",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.028",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.029",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.030",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.031",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.032",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.033",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.034",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.035",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.036",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.037",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.038",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.039",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.040",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.041",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.042",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.043",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.044",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.045",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.046",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.047",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.048",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.049",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.050",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.051",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.052",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.053",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.054",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.055",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.056",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.057",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.058",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.059",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.060",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.061",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.062",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.063",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.064",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.065",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.066",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.067",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.068",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.069",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.070",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.071",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.072",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.073",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.074",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.075",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.076",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.077",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.078",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Gửi duyệt",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.079",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.080",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.081",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.082",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.083",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.084",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.085",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.086",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.087",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.088",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.089",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.090",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.091",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.092",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.093",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.094",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.095",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.096",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.097",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Trả về",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.098",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng??????????? ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Đang soạn thảo",
+        "type": "Dạng câu một lựa chọn"
+    },
+    {
+        "id": "Q.099",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Ngưng áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } ,
+    {
+        "id": "Q.100",
+        "content": "Hệ thống cửa hàng Hachi Hachi có mặt từ năm nào ? Hiện nay có bao nhiêu cửa hàng ?",
+        "groups": "Thương hiệu, văn hóa công ty",
+        "time": "30s",
+        "status": "Duyệt áp dụng",
+        "type": "Dạng câu một lựa chọn"
+    } 
     
 ]

@@ -1,8 +1,10 @@
 import './App.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown,faChevronUp, faListCheck, faQuestion, faMagnifyingGlass, faPencil, faTrash } from "@fortawesome/free-solid-svg-icons"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import questions from './question.json'; 
+import ReactPaginate from 'react-paginate';
+
 
 
 function App() {
@@ -20,6 +22,14 @@ function App() {
   const [isClickDot, setIsClickDot] = useState('');
   const [filterStatus, setFilterStatus] = useState(["Đang soạn thảo", "Trả về"]);
   const [quatityQuestion, setQuatityQuestion] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
+  const questionsPerPage = 25;
+
+  const filteredQuestions = filterStatus.length > 0
+    ? questions.filter(question => filterStatus.includes(question.status))
+    : questions;
+
+  const pageCount = Math.ceil(filteredQuestions.length / questionsPerPage);
 
 
 
@@ -82,9 +92,9 @@ function App() {
     );
   };
 
-  const filteredQuestions = filterStatus.length > 0
-    ? questions.filter(question => filterStatus.includes(question.status))
-    : questions;
+  // const filteredQuestions = filterStatus.length > 0
+  //   ? questions.filter(question => filterStatus.includes(question.status))
+  //   : questions;
 
 
   //Check ChooseAll
@@ -118,8 +128,15 @@ function App() {
     } else {
       setActiveQuestions([...activeQuestions, id]);
       setQuatityQuestion(quatityQuestion+1);
+
     }
   };
+
+  useEffect(() => {
+    if (activeQuestions.length === filteredQuestions.length){
+      setIsClickAll(true)
+    }
+  }, [activeQuestions]);
 
   //ChangeInputSearch
   const handleChangeInputSearch = (event) => {
@@ -138,6 +155,25 @@ function App() {
       setIsClickDot(id);
     }
   };
+
+
+  const handlePageClick = (data) => {
+    setCurrentPage(data.selected);
+  };
+  
+  const handleFirstPageClick = () => {
+    setCurrentPage(0);
+  };
+  
+  const handleLastPageClick = () => {
+    setCurrentPage(pageCount - 1);
+  };
+
+  const offset = currentPage * questionsPerPage;
+  const currentQuestions = filteredQuestions.slice(offset, offset + questionsPerPage);
+
+
+
 
   return (
     <div className="App">
@@ -306,7 +342,7 @@ function App() {
             </div>
 
             <div className='List'> 
-            {filteredQuestions.map(question => (
+            {currentQuestions.map(question => (
                 <div className={`ShowQuestion ${activeQuestions.includes(question.id) ? 'active' : ''}`} onClick={() => toggleActiveQuestion(question.id)}>
                   {/* <div className={`ShowQuestionClick ${activeQuestions.includes(question.id) ? 'active' : ''}`} onClick={() => toggleActiveQuestion(question.id)}> */}
                     <div className='InfoQuestion'>
@@ -439,37 +475,80 @@ function App() {
                       <div className='NumberQuatity'>{quatityQuestion}</div>
                       <div className='DC'>Đã chọn</div>
                     </div>
-                    <div className='QuatityChoose'>
-                      <div className='NumberQuatity'>{quatityQuestion}</div>
-                      <div className='DC'>Đã chọn</div>
+                    <div className='OptionPopUp'>
+                      <div className='iconOpPU'><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.74609 6H9.24609V5.5V1.58711L16.7278 8L9.24609 14.4129V10.5V10H8.74609C5.6556 10 2.83126 11.2117 0.61562 13.0268C1.27955 9.09943 4.6798 6 8.74609 6Z" stroke="#959DB3"/></svg>
+                      </div>
+                      <div className='TextOpPU'>Gửi duyệt</div>
                     </div>                    
-                    <div className='QuatityChoose'>
-                      <div className='NumberQuatity'>{quatityQuestion}</div>
-                      <div className='DC'>Đã chọn</div>
-                    </div>                    
-                    <div className='QuatityChoose'>
-                      <div className='NumberQuatity'>{quatityQuestion}</div>
-                      <div className='DC'>Đã chọn</div>
-                    </div>                    
-                    <div className='QuatityChoose'>
-                      <div className='NumberQuatity'>{quatityQuestion}</div>
-                      <div className='DC'>Đã chọn</div>
-                    </div>                    
-                    <div className='QuatityChoose'>
-                      <div className='NumberQuatity'>{quatityQuestion}</div>
-                      <div className='DC'>Đã chọn</div>
+                    <div className='OptionPopUp'>
+                      <div className='iconOpPU'><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6H8.5V5.5V1.58711L1.0183 8L8.5 14.4129V10.5V10H9C12.0905 10 14.9148 11.2117 17.1305 13.0268C16.4665 9.09943 13.0663 6 9 6Z" fill="white" stroke="#959DB3"/></svg>
+                      </div>
+                      <div className='TextOpPU'>Trả về</div>
                     </div>
-                    <div className='QuatityChoose'>
-                      <div className='NumberQuatity'>{quatityQuestion}</div>
-                      <div className='DC'>Đã chọn</div>
+                    <div className='OptionPopUp'>
+                      <div className='iconOpPU'><svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.44944 16.1863C6.20851 16.1863 4.05936 15.3336 2.47478 13.8159C0.890206 12.2981 0 10.2397 0 8.09325C0 5.94685 0.890206 3.88835 2.47478 2.37062C4.05936 0.852881 6.20851 0.000225513 8.44944 0.000225513C10.0297 -0.0111764 11.5804 0.409996 12.9192 1.21418L12.1059 2.46455C11.0105 1.80613 9.74157 1.46112 8.44838 1.47012C7.08082 1.46812 5.74337 1.85469 4.60524 2.58092C3.46711 3.30715 2.57945 4.3404 2.05456 5.54995C1.52967 6.75951 1.39115 8.091 1.65651 9.37598C1.92187 10.661 2.5792 11.8417 3.54532 12.7688C4.51145 13.6958 5.74296 14.3276 7.08404 14.5841C8.42512 14.8406 9.8155 14.7104 11.0793 14.2099C12.3431 13.7093 13.4235 12.861 14.1838 11.7722C14.9441 10.6834 15.3501 9.40312 15.3505 8.09325C15.3529 7.50892 15.282 6.92643 15.1393 6.35831L16.6264 6.00221C16.7996 6.68679 16.8861 7.38886 16.8841 8.09325C16.8841 10.2372 15.9959 12.2935 14.4145 13.8109C12.8332 15.3282 10.6878 16.1825 8.44944 16.1863Z" fill="#959DB3"/>
+                        <path d="M8.43357 10.2991C8.22994 10.2991 8.03466 10.2215 7.89069 10.0836L4.27539 6.62082L5.36114 5.58086L8.43357 8.52369L16.883 0.430664L17.9688 1.47062L8.97645 10.0836C8.83248 10.2215 8.6372 10.2991 8.43357 10.2991Z" fill="#959DB3"/></svg>
+                      </div>
+                      <div className='TextOpPU'>Duyệt áp dụng</div>
                     </div>
+                    <div className='OptionPopUp'>
+                      <div className='iconOpPU'><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.25532 17.186C13.8146 17.186 17.5106 13.5627 17.5106 9.09302C17.5106 4.62337 13.8146 1 9.25532 1C4.69603 1 1 4.62337 1 9.09302C1 13.5627 4.69603 17.186 9.25532 17.186Z" stroke="#959DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.3508 8.0813H6.15936C5.58945 8.0813 5.12744 8.53422 5.12744 9.09293C5.12744 9.65163 5.58945 10.1046 6.15936 10.1046H12.3508C12.9208 10.1046 13.3828 9.65163 13.3828 9.09293C13.3828 8.53422 12.9208 8.0813 12.3508 8.0813Z" fill="#959DB3"/></svg>
+                      </div>
+                      <div className='TextOpPU'>Ngừng áp dụng</div>
+                    </div>
+                    <div className='OptionPopUp'>
+                      <div className='iconOpPU'><svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.509 17.1941H2.124C1.81581 17.1911 1.52135 17.0647 1.3052 16.8424C1.08905 16.6201 0.968868 16.3202 0.971 16.0085V3.75562H0.586C0.430583 3.75562 0.281532 3.69316 0.171635 3.58198C0.0617391 3.47081 0 3.32003 0 3.1628C0 3.00558 0.0617391 2.85479 0.171635 2.74362C0.281532 2.63245 0.430583 2.56999 0.586 2.56999H3.886C4.16193 1.81634 4.6583 1.16563 5.309 0.704546C5.95309 0.246061 6.72144 0 7.509 0C8.29656 0 9.06491 0.246061 9.709 0.704546C10.3593 1.16642 10.855 1.81786 11.13 2.57201H14.43C14.5854 2.57201 14.7345 2.63447 14.8444 2.74564C14.9543 2.85682 15.016 3.0076 15.016 3.16483C15.016 3.32205 14.9543 3.47283 14.8444 3.58401C14.7345 3.69518 14.5854 3.75764 14.43 3.75764H13.66V16.0085C13.6621 16.3199 13.5422 16.6195 13.3265 16.8417C13.1108 17.0639 12.8168 17.1906 12.509 17.1941V17.1941ZM10.394 8.69641C10.5482 8.69774 10.6955 8.76092 10.8037 8.87207C10.9119 8.98321 10.9721 9.13324 10.971 9.28922V16.0085H12.509V3.75562H2.124V16.0085H3.663V9.28922C3.663 9.21257 3.67792 9.13666 3.70692 9.06584C3.73592 8.99503 3.77842 8.93068 3.832 8.87647C3.88558 8.82227 3.94919 8.77928 4.01919 8.74994C4.0892 8.72061 4.16423 8.70551 4.24 8.70551C4.31577 8.70551 4.3908 8.72061 4.46081 8.74994C4.53081 8.77928 4.59442 8.82227 4.648 8.87647C4.70158 8.93068 4.74408 8.99503 4.77308 9.06584C4.80207 9.13666 4.817 9.21257 4.817 9.28922V16.0085H6.74V6.91695C6.74 6.76214 6.80079 6.61367 6.909 6.50421C7.01721 6.39474 7.16397 6.33324 7.317 6.33324C7.47003 6.33324 7.61679 6.39474 7.725 6.50421C7.83321 6.61367 7.894 6.76214 7.894 6.91695V16.0074H9.817V9.28922C9.81593 9.13324 9.8761 8.98321 9.98428 8.87207C10.0925 8.76092 10.2398 8.69774 10.394 8.69641V8.69641ZM7.509 1.18608C7.01569 1.14132 6.52061 1.24982 6.08983 1.49708C5.65905 1.74435 5.31305 2.11863 5.098 2.56999H9.92C9.70098 2.12188 9.35418 1.75049 8.9244 1.5038C8.49462 1.25711 8.00159 1.14643 7.509 1.18608V1.18608Z" fill="#959DB3"/></svg>
+                      </div>
+                      <div className='TextOpPU'>Xóa câu hỏi</div>
+                    </div>
+                    <div className='OptionCancle'>
+                      <div className='LinePU'></div>
+                      <svg width="18" height="18" viewBox="0 0 17 17" fill="none" className="iconOpCancle" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.1451 16.7024L8.49922 10.0564L1.85331 16.7024C1.64679 16.8991 1.37069 17.0057 1.08563 16.9989C0.800562 16.9922 0.529805 16.8726 0.332852 16.6664C0.126657 16.4694 0.00707693 16.1987 0.000303945 15.9136C-0.00646904 15.6285 0.100187 15.3524 0.296796 15.1459L6.9427 8.49982L0.296796 1.85375C0.199383 1.75148 0.12301 1.63104 0.0721572 1.49927C0.0213047 1.36751 -0.00301968 1.22698 0.000433644 1.08578C0.00388697 0.944585 0.0351571 0.805561 0.0923902 0.67644C0.149623 0.54732 0.231723 0.430629 0.33402 0.333249C0.431469 0.231022 0.548048 0.149015 0.677203 0.0918728C0.806358 0.0347307 0.945472 0.00365779 1.08666 0.000303064C1.22785 -0.00305166 1.36842 0.0214739 1.50014 0.0724175C1.63187 0.123361 1.75216 0.199708 1.85435 0.297191L8.50026 6.94326L15.1462 0.297191C15.3527 0.100578 15.6288 -0.00608098 15.9139 0.000692171C16.1989 0.00746532 16.4697 0.127048 16.6666 0.333249C16.8728 0.530206 16.9924 0.80097 16.9992 1.08604C17.0059 1.37111 16.8994 1.64722 16.7028 1.85375L10.0569 8.49982L16.7028 15.1459C16.8003 15.2481 16.8766 15.3685 16.9276 15.5002C16.9785 15.632 17.003 15.7724 16.9997 15.9136C16.9963 16.0548 16.9651 16.1939 16.908 16.3231C16.8509 16.4522 16.7689 16.5689 16.6666 16.6664C16.5628 16.7715 16.4393 16.855 16.3031 16.9123C16.1669 16.9696 16.0207 16.9994 15.873 17C15.7381 17.0009 15.6043 16.975 15.4794 16.924C15.3544 16.8729 15.2408 16.7976 15.1451 16.7024Z" fill="#959DB3"/></svg>
+                    </div>
+                    
+                  
                   </div>
                 </>
               )}
           </div>
 
-          
+
           <div className='ShowPage'>
+          <div className='pagination-container'>
+            <button className="first-page" onClick={handleFirstPageClick}>Đầu</button>
+            <ReactPaginate
+              previousLabel={<svg width="8" height="13" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.279047 7.09759C0.24436 7.14758 0.213583 7.20074 0.187047 7.25648C0.143604 7.31729 0.105751 7.38272 0.0740474 7.45179C0.0534004 7.52362 0.0393301 7.59756 0.0320474 7.67248C-0.0104383 7.81399 -0.0104383 7.96684 0.0320474 8.10835C0.0393301 8.18327 0.0534004 8.25721 0.0740474 8.32904C0.105809 8.39773 0.14366 8.46278 0.187047 8.52324C0.213384 8.58051 0.244166 8.63515 0.279047 8.68655V8.68655L5.92005 14.5161C6.12667 14.7149 6.3952 14.8175 6.66903 14.8022C6.94286 14.7869 7.20061 14.6549 7.38796 14.434C7.57531 14.2131 7.67763 13.9206 7.67336 13.6181C7.66908 13.3156 7.55855 13.0267 7.36505 12.8123L2.54905 7.82476L7.36505 2.83717C7.55855 2.62283 7.66908 2.33396 7.67336 2.03146C7.67763 1.72895 7.57531 1.43642 7.38796 1.21553C7.20061 0.99463 6.94286 0.862616 6.66903 0.847305C6.3952 0.831994 6.12667 0.934582 5.92005 1.13345L0.279047 7.09759Z" fill="#959DB3"/>
+              </svg>}
+              nextLabel={<svg width="8" height="13" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.41095 8.55183C7.44564 8.50183 7.47642 8.44867 7.50295 8.39293C7.5464 8.33212 7.58425 8.2667 7.61595 8.19762C7.6366 8.12579 7.65067 8.05186 7.65795 7.97693C7.70044 7.83543 7.70044 7.68257 7.65795 7.54107C7.65067 7.46614 7.6366 7.39221 7.61595 7.32038C7.58419 7.25168 7.54634 7.18663 7.50295 7.12617C7.47662 7.06891 7.44584 7.01427 7.41095 6.96286V6.96286L1.76995 1.13334C1.56332 0.934477 1.2948 0.831889 1.02097 0.8472C0.747138 0.862511 0.489388 0.994525 0.302036 1.21542C0.114685 1.43632 0.0123648 1.72884 0.016639 2.03135C0.0209132 2.33386 0.131448 2.62272 0.324949 2.83707L5.14095 7.82465L0.324949 12.8122C0.131448 13.0266 0.0209132 13.3154 0.016639 13.618C0.0123648 13.9205 0.114685 14.213 0.302036 14.4339C0.489388 14.6548 0.747138 14.7868 1.02097 14.8021C1.2948 14.8174 1.56332 14.7148 1.76995 14.516L7.41095 8.55183Z" fill="#959DB3"/>
+              </svg>}
+              breakLabel={'...'}
+              breakClassName={'break-me'}
+              pageCount={pageCount}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={3}
+              onPageChange={handlePageClick}
+              containerClassName={'pagination'}
+              subContainerClassName={'pages pagination'}
+              activeClassName={'active'}
+              previousClassName={'previous-button'}
+              nextClassName={'next-button'}
+              previousLinkClassName={'previous-link'}
+              nextLinkClassName={'next-link'}
+            />
+            <button className="last-page" onClick={handleLastPageClick}>Cuối</button>
+          </div>
+
+
+
           </div>
       </div>
     </div>
